@@ -218,9 +218,3 @@ function removePopUp(element) {
   popUp.style.display = "none";
   content.remove();
 }
-
-// let validation = document.querySelector(".complete-btn");
-
-// validation.addEventListener("click", function () {
-//   console.log("bogdan");
-// });
