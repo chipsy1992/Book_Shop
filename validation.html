@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/56be012960.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Form Validator</title>
+  </head>
+  <body>
+    <main class="validation-wrapper">
+      <div class="container">
+        <form id="form" class="form">
+          <h2>Register With Us</h2>
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="first-name" placeholder="Enter name" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" placeholder="Enter surname" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="delivery_date">Delivery date:</label>
+            <input id="delivery_date" type="date" name="delivery_date" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="address">Street</label>
+            <input type="text" id="address" placeholder="Enter address" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control numbers">
+            <div class="house">
+              <label for="house-number">House number</label>
+              <input
+                type="text"
+                id="house-number"
+                placeholder="Enter house number"
+              />
+              <small>Error message</small>
+            </div>
+            <div class="flat">
+              <label for="flat-number">Flat number</label>
+              <input
+                type="text"
+                id="flat-number"
+                placeholder="Enter flat number"
+              />
+              <small>Error message</small>
+            </div>
+          </div>
+          <div class="form-control payment">
+            <input type="radio" id="cash" name="pay" value="cash" />
+            <label for="cash">Cash</label>
+            <input type="radio" id="card" name="pay" value="card" />
+            <label for="card">Card</label>
+            <small>Error message</small>
+          </div>
+          <button id="btn" type="submit" disabled>Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <div class="home-page">
+      <a href="./index.html">Book Page</a>
+    </div>
+
+    <script src="validation.js"></script>
+  </body>
+</html>
