@@ -140,7 +140,7 @@ fetch("./books.json") //path to the file with json data
               <h2>${title}</h2>
               <p>${description}</p>  
             </div>
-            <span onclick="removePopUp(this)" class="close"><img src="./icons/xmark-solid.svg" alt=""></span>
+            <span onclick="removeModal(this)" class="close"><img src="./icons/xmark-solid.svg" alt=""></span>
           </div>
         `;
         popUpModal.style.display = "block";
@@ -181,7 +181,7 @@ fetch("./books.json") //path to the file with json data
           <h2>${title}</h2>
           <p><span>${price}</span></p>
         </div>
-        <span onclick="removeFromCart(this)" class="close"><img src="./icons/xmark-solid.svg" alt=""></span>
+        <span onclick="removeBook(this)" class="close"><img src="./icons/xmark-solid.svg" alt=""></span>
       </div>
       `;
 
@@ -201,7 +201,7 @@ fetch("./books.json") //path to the file with json data
 
 let allTotal = 0;
 
-function removeFromCart(element) {
+function removeBook(element) {
   let content = element.closest(".order-container");
   let price = content.querySelector("p span").innerText;
   price = price.substring(1);
@@ -212,7 +212,7 @@ function removeFromCart(element) {
   content.remove();
 }
 
-function removePopUp(element) {
+function removeModal(element) {
   let content = element.closest(".show-container");
   let popUp = document.querySelector(".popUp");
   popUp.style.display = "none";
