@@ -171,3 +171,13 @@ function removePopUp(element) {
   content.remove();
   btn.removeAttribute("disabled");
 }
+
+// let today = new Date().toLocaleDateString();
+
+// console.log(today);
+
+let yourDate = new Date();
+yourDate.toISOString().split("T")[0];
+const offset = yourDate.getTimezoneOffset();
+yourDate = new Date(yourDate.getTime() - offset * 60 * 1000 * 12);
+deliveryDate.setAttribute("min", yourDate.toISOString().split("T")[0]);
